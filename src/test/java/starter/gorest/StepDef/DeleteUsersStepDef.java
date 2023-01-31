@@ -11,12 +11,12 @@ public class DeleteUsersStepDef {
     @Steps
     GorestAPI gorestAPI;
 
-    @Given("Delete user with valid id {int}")
+    @Given("Delete users with valid id {int}")
     public void deleteUserWithValidId(int id){
         gorestAPI.deleteUser(id);
     }
 
-    @When("Send request delete user")
+    @When("Send request delete users")
     public void sendRequestDeleteUser(){
         SerenityRest.when().delete(GorestAPI.DELETE_USER);
     }

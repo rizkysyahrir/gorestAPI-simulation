@@ -21,13 +21,13 @@ public class UpdateUsersStepDef {
     @Steps
     GorestAPI gorestAPI;
 
-    @Given("PUT update user with valid json with id {int}")
+    @Given("PUT update users with valid json with id {int}")
     public void updateUserWithValidJsonWithId(int id){
         File json = new File(Constant.JSON_REQUEST+"/UpdateUsers.json");
         gorestAPI.putUpdateUsers(id, json);
     }
 
-    @When("Send request PUT update user")
+    @When("Send request PUT update users")
     public void sendRequestUpdateUser(){
         SerenityRest.when().put(GorestAPI.PUT_UPDATE_USER);
     }
@@ -50,7 +50,7 @@ public class UpdateUsersStepDef {
     }
 
     //Scenario 2
-    @Given("PUT update user with valid json with id {int} without email")
+    @Given("PUT update users with valid json with id {int} without email")
     public void putUpdateUserWithValidJsonWithId(int id){
         File json = new File(Constant.JSON_REQUEST+"/UpdateUsersWithoutEmail.json");
         gorestAPI.putUpdateUsers(id, json);
@@ -70,7 +70,7 @@ public class UpdateUsersStepDef {
                 .body(JsonSchemaValidator.matchesJsonSchema(jsonSchema));
     }
 
-    @When("Send request PATCH update user")
+    @When("Send request PATCH update users")
     public void sendRequestPatchUpdateUser(){
         SerenityRest.when().patch(GorestAPI.PATCH_UPDATE_USER);
     }
