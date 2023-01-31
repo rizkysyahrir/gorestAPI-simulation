@@ -3,8 +3,8 @@ Feature: Testing delete user Gorest API
 
   @Tugas @PositiveCase
   Scenario Outline: Delete users with valid id
-    Given Delete user with valid id <id>
-    When Send request delete user
+    Given Delete users with valid id <id>
+    When Send request delete users
     Then Should return status code 204
     Examples:
       | id  |
@@ -13,8 +13,8 @@ Feature: Testing delete user Gorest API
 
   @Tugas @NegativeCase
   Scenario Outline: Delete users with id unregister
-    Given Delete user with valid id <id>
-    When Send request delete user
+    Given Delete users with valid id <id>
+    When Send request delete users
     Then Should return status code 404
     Examples:
       | id  |
