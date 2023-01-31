@@ -73,4 +73,9 @@ public class GorestAPI {
         SerenityRest.given().headers("Authorization","Bearer d0458302309555760e28b2f640c85b88ba5639d4f4421bac49d94d6492344f14")
                 .pathParam("id", id);
     }
+
+
+    public void Ricolagicobacoba{
+
+    }
 }
